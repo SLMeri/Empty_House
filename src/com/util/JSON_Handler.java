@@ -54,6 +54,9 @@ public class JSON_Handler {
     public static void main(String[] args) {
         //Test your json paths here
         System.out.println(getJSON("PlayerCommands.JSON", "json"));
+        System.out.println(getJSON("Items.Json", "json"));
+        System.out.println(getJSON("Locations.Json", "json"));
+        System.out.println(getJSON("Npcs.Json", "json"));
 
     }
 }

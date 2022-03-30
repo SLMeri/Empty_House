@@ -1,27 +1,37 @@
 package com.players.player;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.util.JSON_Handler;
 import org.json.simple.JSONObject;
 
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.Reader;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 
 public class Player  {
+
     private static Player singleton = null;
     private String name;
-    private String location;
     //Will look to refactor this JSONObject
     private static JSONObject commands = JSON_Handler.getJSON("PlayerCommands.JSON", "json");
-    private ArrayList<String> inventory;
+    private JSONObject inventory = JSON_Handler.getJSON("Items.Json", "json");
+    private static JSONObject location = JSON_Handler.getJSON("Locations.Json", "json");
 
 
-    public static Player getInstance (String name, String location, JSONObject commands){
+    public static Player getInstance (String name, JSONObject location, JSONObject commands){
         if(singleton == null){
             singleton = new Player(name, location, commands );
     }
         return singleton;
     };
 
-    Player(String name, String location, JSONObject commands) {
+    Player(String name, JSONObject location, JSONObject commands) {
         setName(name);
         setCommands(commands);
         setLocation(location);
@@ -35,11 +45,19 @@ public class Player  {
         this.name = name;
     }
 
-    public String getLocation() {
+    public JSONObject getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(JSONObject inventory) {
+        this.inventory = inventory;
+    }
+
+    public JSONObject getLocation() {
         return location;
     }
 
-    public void setLocation(String location) {
+    public void setLocation(JSONObject location) {
         this.location = location;
     }
 
@@ -67,7 +85,24 @@ public class Player  {
 
     public static void main(String[] args) {
 
-        Player player = getInstance("Bill", "house", commands);
+        Player player = getInstance("Bill", location, commands);
         System.out.println(player.getCommands());
+        System.out.println(player.getLocation());
+        System.out.println(player.getInventory());
+        System.out.println(player);
+
+
+//        Reader reader;
+//        try {
+//            reader = new FileReader("src/com/Assets/json/PlayerCommands.JSON");
+//            Gson gson = new Gson();
+//            Type collectionType = new TypeToken<List<String>>(){}.getType();
+//            List<String> collection = gson.fromJson(reader, collectionType);
+//
+//            System.out.println(collection);
+//
+//        }catch(FileNotFoundException e){
+//            e.printStackTrace();
+//        }
     }
 }

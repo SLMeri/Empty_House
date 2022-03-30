@@ -1,11 +1,11 @@
 {
   "Items": {
-    "key": [
+    "key":[
       {
         "location": "entrance"
       }
     ],
-    "skeleton key": [
+    "skeleton key":[
       {
         "location": "bathroom"
       }
@@ -15,7 +15,7 @@
         "location": "main bedroom"
       }
     ],
-    "pan": [
+    "pan":[
       {
         "location": "kitchen"
       }
@@ -25,7 +25,7 @@
         "location": "kitchen"
       }
     ],
-    "flashlight": [
+    "flashlight":[
       {
         "location": "second bedroom"
       }
