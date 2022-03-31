@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Player  {
     private static Player singleton = null;
     private String name;
-    private ArrayList<String> currentInventory;
+    private ArrayList<String> inventory;
     //Will look to refactor this JSONObject
     private static JSONObject currentLocation = JSON_Handler.getJSON("locations.json", "json");
     private static JSONObject commands = JSON_Handler.getJSON("commands.json", "json");
@@ -61,7 +61,7 @@ public class Player  {
         return super.getClass().getSimpleName() + "{" +
                 "name='" + name + '\'' +
                 ", currentLocation='" + currentLocation + '\'' +
-                ", currentInventory=" + currentInventory +
+                ", inventory=" + inventory +
                 //This can be removed once the command list grows
                 ", commands=" + commands +
                 '}';
