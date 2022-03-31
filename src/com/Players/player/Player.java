@@ -8,23 +8,25 @@ import java.util.ArrayList;
 public class Player  {
     private static Player singleton = null;
     private String name;
-    private String location;
+    private ArrayList<String> currentInventory;
     //Will look to refactor this JSONObject
-    private static JSONObject commands = JSON_Handler.getJSON("PlayerCommands.JSON", "json");
-    private ArrayList<String> inventory;
+    private static JSONObject currentLocation = JSON_Handler.getJSON("locations.json", "json");
+    private static JSONObject commands = JSON_Handler.getJSON("commands.json", "json");
 
 
-    public static Player getInstance (String name, String location, JSONObject commands){
+
+
+    public static Player getInstance (String name, JSONObject location, JSONObject commands){
         if(singleton == null){
             singleton = new Player(name, location, commands );
     }
         return singleton;
     };
 
-    Player(String name, String location, JSONObject commands) {
+    Player(String name, JSONObject currentLocation, JSONObject commands) {
         setName(name);
         setCommands(commands);
-        setLocation(location);
+        setLocation(currentLocation);
     }
 
     public String getName() {
@@ -35,12 +37,12 @@ public class Player  {
         this.name = name;
     }
 
-    public String getLocation() {
-        return location;
+    public JSONObject getLocation() {
+        return currentLocation;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setLocation(JSONObject location) {
+        this.currentLocation = location;
     }
 
     public JSONObject getCommands() {
@@ -58,8 +60,8 @@ public class Player  {
     public String toString() {
         return super.getClass().getSimpleName() + "{" +
                 "name='" + name + '\'' +
-                ", location='" + location + '\'' +
-                ", inventory=" + inventory +
+                ", currentLocation='" + currentLocation + '\'' +
+                ", currentInventory=" + currentInventory +
                 //This can be removed once the command list grows
                 ", commands=" + commands +
                 '}';
@@ -67,7 +69,9 @@ public class Player  {
 
     public static void main(String[] args) {
     //Small change
-        Player player = getInstance("Bill", "house", commands);
+        Player player = getInstance("Bill", currentLocation, commands);
         System.out.println(player.getCommands());
+        System.out.println(player.getLocation());
+        System.out.println(player.getName());
     }
 }

@@ -53,7 +53,7 @@ public class JSON_Handler {
 
     public static void main(String[] args) {
         //Test your json paths here
-        System.out.println(getJSON("PlayerCommands.JSON", "json"));
+        System.out.println(getJSON("commands.json", "json"));
         System.out.println(getJSON("noun.JSON", "json"));
         System.out.println(getJSON("verbs.JSON", "json"));
     }
