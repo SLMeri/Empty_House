@@ -2,7 +2,7 @@
   "NPCs": {
     "butler": [
       {
-        "currentLocation": "dining room"
+        "location": "dining room"
       },
       {
         "name": "Jarvis"
@@ -13,7 +13,7 @@
     ],
     "maid": [
       {
-        "currentLocation": "second bedroom"
+        "location": "second bedroom"
       },
       {
         "name": "Annabelle"

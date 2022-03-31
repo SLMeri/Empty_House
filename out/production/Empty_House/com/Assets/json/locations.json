@@ -3,7 +3,7 @@
     "Entrance": [
       {
         "room_name": "Entrance",
-        "currentLocation": "entrance"
+        "location": "entrance"
       },
       {
         "directions": {
@@ -20,7 +20,7 @@
     "Kitchen": [
       {
         "room": "Kitchen",
-        "currentLocation": "kitchen"
+        "location": "kitchen"
       },
       {
         "directions": {
@@ -37,7 +37,7 @@
     "Dining Room": [
       {
         "room": "Dining Room",
-        "currentLocation": "dining"
+        "location": "dining"
       },
       {
         "directions": {
@@ -54,7 +54,7 @@
     "Library": [
       {
         "room": "Library",
-        "currentLocation": "library"
+        "location": "library"
       },
       {
         "directions": {
@@ -71,7 +71,7 @@
       "Main Bedroom": [
         {
           "room": "Main bedroom",
-          "currentLocation": "main bedroom"
+          "location": "main bedroom"
         },
         {
           "directions": {
@@ -88,7 +88,7 @@
       "Second Bedroom": [
         {
           "room": "Second Bedroom",
-          "currentLocation": "second bedroom"
+          "location": "second bedroom"
         },
         {
           "directions": {
@@ -105,7 +105,7 @@
       "Bathroom": [
         {
           "room": "Bathroom",
-          "currentLocation": "bathroom"
+          "location": "bathroom"
         },
         {
           "directions": {
@@ -122,7 +122,7 @@
       "Stairs": [
         {
           "room": "Stairs",
-          "currentLocation": "stairs"
+          "location": "stairs"
         },
         {
           "directions": {
@@ -139,7 +139,7 @@
       "Secret Room1": [
         {
           "room": "secretRm1",
-          "currentLocation": "secretRm1"
+          "location": "secretRm1"
         },
         {
           "directions": {
@@ -156,7 +156,7 @@
       "Passage": [
         {
           "room": "Passage",
-          "currentLocation": "passage"
+          "location": "passage"
         },
         {
           "directions": {
@@ -173,7 +173,7 @@
       "Basement": [
         {
           "room": "Basement",
-          "currentLocation": "basement"
+          "location": "basement"
         },
         {
           "directions": {
@@ -190,7 +190,7 @@
       "Secret room2": [
         {
           "room": "Secret Room",
-          "currentLocation": "secretRm2"
+          "location": "secretRm2"
         },
         {
           "directions": {

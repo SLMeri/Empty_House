@@ -66,7 +66,7 @@
     "command"
   ],
   "map": [
-    "currentLocation",
+    "location",
     "where am i"
   ],
   "inventory": [

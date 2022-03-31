@@ -2,32 +2,32 @@
   "Items": {
     "key": [
       {
-        "currentLocation": "entrance"
+        "location": "entrance"
       }
     ],
     "skeleton key": [
       {
-        "currentLocation": "bathroom"
+        "location": "bathroom"
       }
     ],
     "book": [
       {
-        "currentLocation": "main bedroom"
+        "location": "main bedroom"
       }
     ],
     "pan": [
       {
-        "currentLocation": "kitchen"
+        "location": "kitchen"
       }
     ],
     "knife":[
       {
-        "currentLocation": "kitchen"
+        "location": "kitchen"
       }
     ],
     "flashlight": [
       {
-        "currentLocation": "second bedroom"
+        "location": "second bedroom"
       }
     ]
   }
