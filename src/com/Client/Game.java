@@ -216,7 +216,7 @@ public class Game implements java.io.Serializable {
                 "He decides to go upstairs to look around, where would you like to go on the ground floor? \n"
                 + "\n" +
                 "Enter: north, south, east, west, up, down to move areas, \n" + "or look at to inspect an item, \n" + "or take,drop to pick up or drop an item, \n"
-                + "or quit to quit.\n"; // some instructions added to make this make more sense
+                + "or quit to quit.\n"; // some instructions added to make this make more sense plus more descriptions
         showStr(s);
         look();
     }
